@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" fill="none">
+  <rect width="600" height="800" fill="#0a0a0a"/>
+  <rect x="100" y="200" width="400" height="260" rx="16" fill="#111127"/>
+  <rect x="120" y="220" width="360" height="200" rx="8" fill="#0d0d1a"/>
+  <rect x="120" y="220" width="360" height="200" rx="8" fill="url(#cineGrad)" opacity="0.3"/>
+  <defs>
+    <linearGradient id="cineGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <circle cx="300" cy="320" r="35" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <path d="M290 305 L318 320 L290 335Z" fill="white" opacity="0.7"/>
+  <rect x="180" y="500" width="240" height="10" rx="5" fill="#1a1a2e"/>
+  <rect x="180" y="500" width="140" height="10" rx="5" fill="#a855f7" opacity="0.5"/>
+  <circle cx="320" cy="505" r="8" fill="#a855f7" opacity="0.7"/>
+  <rect x="150" y="560" width="60" height="40" rx="6" fill="#1a1a2e"/>
+  <rect x="230" y="560" width="60" height="40" rx="6" fill="#1a1a2e"/>
+  <rect x="310" y="560" width="60" height="40" rx="6" fill="#1a1a2e"/>
+  <rect x="390" y="560" width="60" height="40" rx="6" fill="#1a1a2e"/>
+  <circle cx="140" cy="700" r="5" fill="#a855f7" opacity="0.15"/>
+  <circle cx="460" cy="140" r="8" fill="#3b82f6" opacity="0.1"/>
+</svg>
