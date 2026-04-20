@@ -49,12 +49,20 @@ export default function FlipCard({ title, description, image }: FlipCardProps) {
       <motion.div
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        style={{ transformStyle: "preserve-3d" }}
+        style={{
+          transformStyle: "preserve-3d",
+          WebkitTransformStyle: "preserve-3d",
+          transform: "translateZ(0)",
+        }}
         className="relative w-full h-full"
       >
         {/* ── FRONT ── */}
         <motion.div
-          style={{ backfaceVisibility: "hidden" }}
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(0deg) translateZ(0)",
+          }}
           className="absolute w-full h-full rounded-2xl overflow-hidden border border-white/20 shadow-[0_18px_55px_rgba(0,0,0,0.4)]"
         >
           <div className="w-full h-full relative">
@@ -93,7 +101,11 @@ export default function FlipCard({ title, description, image }: FlipCardProps) {
 
         {/* ── BACK ── */}
         <motion.div
-          style={{ backfaceVisibility: "hidden", rotateY: 180 }}
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(180deg) translateZ(0)",
+          }}
           className="absolute w-full h-full rounded-2xl overflow-hidden border border-white/20 bg-gradient-to-br from-slate-950/95 via-zinc-900/85 to-black/80 backdrop-blur-xl shadow-[0_16px_50px_rgba(0,0,0,0.45)]"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-cyan-300/10" />
