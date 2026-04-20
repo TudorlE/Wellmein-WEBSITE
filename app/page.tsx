@@ -91,16 +91,32 @@ export default function Home() {
     <div>
       {/* ─── HERO ─── */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black">
+
+        {/* Inele pulsatoare — staggered, se repeta */}
+        {[0, 0.55, 1.1].map((ringDelay, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0 }}
+            animate={{ scale: [0.45, 1.9, 3.1], opacity: [0, 0.38, 0] }}
+            transition={{
+              duration: 3.0,
+              delay: 1.0 + ringDelay,
+              ease: "easeOut",
+              repeat: Infinity,
+              repeatDelay: 0.6,
+            }}
+            className="absolute pointer-events-none rounded-full border border-white/25"
+            style={{ width: 540, height: 190 }}
+          />
+        ))}
+
         <div className="relative z-10 text-center px-4 flex flex-col items-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5, y: 60 }}
+            initial={{ opacity: 0, scale: 0.5, y: 55 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            whileHover={{
-              scale: 1.08,
-              transition: { duration: 0.3 },
-            }}
-            className="cursor-pointer"
+            transition={{ duration: 1.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+            whileHover={{ scale: 1.06, transition: { duration: 0.35, ease: "easeOut" } }}
+            className="cursor-pointer relative overflow-hidden"
           >
             <Image
               src="/WELLMEIN PNG 1.png"
@@ -109,6 +125,14 @@ export default function Home() {
               height={200}
               className="h-14 sm:h-20 md:h-26 w-auto brightness-0 invert"
               priority
+            />
+
+            {/* Blur overlay — dispare la intrare */}
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
+              transition={{ duration: 1.1, ease: "easeOut", delay: 0.1 }}
+              className="absolute inset-0 pointer-events-none z-10 bg-black"
             />
           </motion.div>
         </div>

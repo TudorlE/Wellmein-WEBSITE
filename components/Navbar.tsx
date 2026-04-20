@@ -59,6 +59,20 @@ export default function Navbar() {
               </a>
             </div>
 
+            {/* Desktop logo — stanga, doar pe md+ */}
+            <div className="hidden md:flex items-center">
+              <a href="#" aria-label="Wellmein Home">
+                <Image
+                  src="/Wellmein 3.webp"
+                  alt="Wellmein"
+                  width={160}
+                  height={45}
+                  className="h-10 w-auto"
+                  priority
+                />
+              </a>
+            </div>
+
             {/* Desktop nav — centrat */}
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
               <div
