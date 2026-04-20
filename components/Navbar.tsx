@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { useLanguage } from "@/components/LanguageProvider";
 
 const navLinks = [
@@ -12,7 +13,7 @@ const navLinks = [
 ];
 
 const LANGS = [
-  { id: "en" as const, icon: "🇬🇧", title: "English" },
+  { id: "en" as const, icon: "EN", title: "English" },
   { id: "ro" as const, icon: "🇷🇴", title: "Romana" },
   { id: "ru" as const, icon: "🇷🇺", title: "Russkiy" },
 ];
@@ -43,6 +44,20 @@ export default function Navbar() {
       >
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-24 items-center">
+
+            {/* Mobile logo — stânga, doar pe telefon */}
+            <div className="md:hidden flex items-center flex-1">
+              <a href="#" aria-label="Wellmein Home">
+                <Image
+                  src="/Wellmein white NAV.png"
+                  alt="Wellmein"
+                  width={120}
+                  height={36}
+                  className="h-8 w-auto brightness-0 invert"
+                  priority
+                />
+              </a>
+            </div>
 
             {/* Desktop nav — centrat */}
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">

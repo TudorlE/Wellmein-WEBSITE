@@ -39,22 +39,38 @@ export default function Footer() {
         ))}
       </nav>
 
-      {/* Contact columns */}
-      <div className="flex flex-col md:flex-row justify-center gap-12 md:gap-24 text-center mb-20 px-4">
-        <div>
-          <p className="text-sm font-semibold text-zinc-500 mb-3">{t("footer.booking")}</p>
-          <p className="text-base font-medium text-white">+373 60996996</p>
-          <p className="text-base font-medium text-white">wellmeinbeats@gmail.com</p>
+      {/* Contact columns + Map */}
+      <div className="max-w-6xl mx-auto px-4 mb-20">
+        <div className="flex flex-col md:flex-row justify-center gap-12 md:gap-24 text-center mb-12">
+          <div>
+            <p className="text-sm font-semibold text-zinc-500 mb-3">{t("footer.booking")}</p>
+            <p className="text-base font-medium text-white">+373 60996996</p>
+            <p className="text-base font-medium text-white">wellmeinbeats@gmail.com</p>
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-zinc-500 mb-3">{t("footer.office")}</p>
+            <p className="text-base font-medium text-white">+373 60996996</p>
+            <p className="text-base font-medium text-white">tudotaru@gmail.com</p>
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-zinc-500 mb-3">{t("footer.studioAddress")}</p>
+            <p className="text-base font-medium text-white">Alexei Mateevici St 60,</p>
+            <p className="text-base font-medium text-white">Chișinău, Moldova</p>
+          </div>
         </div>
-        <div>
-          <p className="text-sm font-semibold text-zinc-500 mb-3">{t("footer.office")}</p>
-          <p className="text-base font-medium text-white">+373 60996996</p>
-          <p className="text-base font-medium text-white">tudotaru@gmail.com</p>
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-zinc-500 mb-3">{t("footer.studioAddress")}</p>
-          <p className="text-base font-medium text-white">Alexei Mateevici St 60,</p>
-          <p className="text-base font-medium text-white">Chișinău, Moldova</p>
+
+        {/* Google Maps embed */}
+        <div className="rounded-2xl overflow-hidden border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+          <iframe
+            title="Wellmein Studio Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2720.5!2d28.8353!3d47.0245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c3628b769a1%3A0x0!2sStrada+Alexei+Mateevici+60%2C+Chi%C8%99in%C4%83u!5e0!3m2!1sen!2smd!4v1715000000000!5m2!1sen!2smd"
+            width="100%"
+            height="300"
+            style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
 
