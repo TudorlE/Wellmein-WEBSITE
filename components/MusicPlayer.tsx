@@ -61,8 +61,15 @@ const CATEGORIES: { id: string; label: string; tracks: Track[] }[] = [
         title: "HELLIO",
         artist: "WELLMEIN",
         src: "/Music/HELLIO TAG.mp3",
-        cover: "/Music/hel;io photo 2.jpg",
+        cover: "/Music/bfb2adba17077100c312afd80603bb6a.jpg",
         gradient: "linear-gradient(135deg,#1c0a00 0%,#7c2d12 50%,#f97316 100%)",
+      },
+      {
+        title: "VIP",
+        artist: "WELLMEIN",
+        src: "/Music/VIP_Cardi_x_Minaj_Type_Beat_Freestyle_RapTrap_Instrumental_2023.mp3",
+        cover: "/Music/a439e2649c62af844b1b3bb71982dea0.jpg",
+        gradient: "linear-gradient(135deg,#1a0000 0%,#7f0000 50%,#e00000 100%)",
       },
     ],
   },
@@ -426,7 +433,7 @@ export default function MusicPlayer() {
             <div className="px-8 pt-2 pb-1">
               <div
                 ref={progressBarRef}
-                className="w-full h-[3px] bg-white/10 rounded-full cursor-pointer group mb-2"
+                className="w-full py-3 -my-3 cursor-pointer group mb-2"
                 onClick={seek}
                 onMouseDown={(e) => {
                   e.preventDefault();
@@ -434,15 +441,18 @@ export default function MusicPlayer() {
                 }}
                 onTouchStart={(e) => {
                   if (!e.touches[0]) return;
+                  e.stopPropagation();
                   startSeekDrag(e.touches[0].clientX);
                 }}
+                onTouchEnd={(e) => e.stopPropagation()}
               >
+                <div className="w-full h-[3px] bg-white/10 rounded-full relative">
                 <div
                   className="h-full rounded-full relative"
                   style={{
                     width: `${progress * 100}%`,
                     background: "white",
-                    transition: "width 0.1s linear",
+                    transition: isDraggingSeek ? "none" : "width 0.1s linear",
                   }}
                 >
                   <div
@@ -450,6 +460,7 @@ export default function MusicPlayer() {
                       isDraggingSeek ? "scale-100" : "scale-0 group-hover:scale-100"
                     }`}
                   />
+                </div>
                 </div>
               </div>
               <div className="flex justify-between text-[11px] text-white/25 font-medium">

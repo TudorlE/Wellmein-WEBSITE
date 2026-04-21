@@ -71,8 +71,8 @@ const translations: Record<Lang, Record<string, string>> = {
     "form.errors.messageRequired": "Message is required.",
     "form.errors.generic": "Something went wrong.",
 
-    "footer.booking": "Rezervari",
-    "footer.office": "Birou",
+    "footer.booking": "Booking",
+    "footer.office": "Office",
     "footer.studioAddress": "Studio Address",
     "footer.rights": "All rights reserved.",
   },
@@ -136,8 +136,8 @@ const translations: Record<Lang, Record<string, string>> = {
     "form.errors.messageRequired": "Mesajul este obligatoriu.",
     "form.errors.generic": "A apărut o eroare.",
 
-    "footer.booking": "Бронирование",
-    "footer.office": "Офис",
+    "footer.booking": "Rezervări",
+    "footer.office": "Birou",
     "footer.studioAddress": "Adresă Studio",
     "footer.rights": "Toate drepturile rezervate.",
   },
@@ -201,8 +201,8 @@ const translations: Record<Lang, Record<string, string>> = {
     "form.errors.messageRequired": "Сообщение обязательно.",
     "form.errors.generic": "Что-то пошло не так.",
 
-    "footer.booking": "Booking",
-    "footer.office": "Office",
+    "footer.booking": "Бронирование",
+    "footer.office": "Офис",
     "footer.studioAddress": "Адрес Студии",
     "footer.rights": "Все права защищены.",
   },
