@@ -13,6 +13,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/Service/favicon wellmein.ico",
+  },
   title: {
     default: "Wellmein — Sound. Identity. Vision.",
     template: "%s | Wellmein",
